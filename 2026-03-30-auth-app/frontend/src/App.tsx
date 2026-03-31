@@ -1,4 +1,3 @@
-import { useState } from "react";
 import "./App.css";
 import Layout from "./components/Layout";
 import { Navigate, Route, Routes } from "react-router-dom";

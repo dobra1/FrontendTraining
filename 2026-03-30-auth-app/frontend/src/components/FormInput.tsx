@@ -10,7 +10,6 @@ type FormInputProps = {
 };
 
 function FormInput({
-  label,
   name,
   type = "text",
   value,

@@ -1,11 +1,11 @@
-import React, { type ReactNode } from "react";
+import { type ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 
 type Props = { children: ReactNode };
 
 function Layout({ children }: Props) {
-  const { isAuthenticated, logout, user } = useAuth();
+  const { isAuthenticated, logout } = useAuth();
   return (
     <div className="app-shell">
       <header className="app-header">
