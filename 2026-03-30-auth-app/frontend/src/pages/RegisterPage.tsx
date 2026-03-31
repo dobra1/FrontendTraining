@@ -43,38 +43,42 @@ function RegisterPage({}: Props) {
   }
 
   return (
-    <AuthCard title="Regisztráció">
-      <form onSubmit={handleSubmit}>
-        <FormInput
-          label="Név"
-          name="name"
-          value={form.name}
-          onChange={handleChange}
-          placeholder="Név"
-        />
-        <FormInput
-          label="Email"
-          name="email"
-          type="email"
-          value={form.email}
-          onChange={handleChange}
-          placeholder="Email"
-        />
-        <FormInput
-          label="Jelszó"
-          name="password"
-          type="password"
-          value={form.password}
-          onChange={handleChange}
-          placeholder="Jelszó"
-        />
-        {error ? <p className="error-text">{error}</p> : null}
-        <button className="primary-btn" type="submit" disabled={loading}>
-          {loading ? "Loading..." : "Regisztráció"}
-        </button>
-        <Link to="/login">Már van fiókod? Jelentkezz be!</Link>
-      </form>
-    </AuthCard>
+    <div className="auth-container">
+      <AuthCard title="Regisztráció">
+        <form onSubmit={handleSubmit} className="auth-form">
+          <FormInput
+            label="Név"
+            name="name"
+            value={form.name}
+            onChange={handleChange}
+            placeholder="Név"
+          />
+          <FormInput
+            label="Email"
+            name="email"
+            type="email"
+            value={form.email}
+            onChange={handleChange}
+            placeholder="Email"
+          />
+          <FormInput
+            label="Jelszó"
+            name="password"
+            type="password"
+            value={form.password}
+            onChange={handleChange}
+            placeholder="Jelszó"
+          />
+          {error ? <p className="error-text">{error}</p> : null}
+          <button className="submit-btn" type="submit" disabled={loading}>
+            {loading ? "Loading..." : "Regisztráció"}
+          </button>
+          <Link className="reg-link" to="/login">
+            Már van fiókod? Jelentkezz be!
+          </Link>
+        </form>
+      </AuthCard>
+    </div>
   );
 }
 
