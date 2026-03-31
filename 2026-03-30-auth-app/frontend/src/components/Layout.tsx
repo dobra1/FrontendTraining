@@ -19,7 +19,6 @@ function Layout({ children }: Props) {
           ) : (
             <>
               <Link to="/dashboard">Dashboard</Link>
-              <span className="welcome-text">Welcome {user?.email}</span>
               <button className="ghost-button" onClick={logout}>
                 Logout
               </button>

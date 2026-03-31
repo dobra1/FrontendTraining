@@ -12,6 +12,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
   background: linear-gradient(
     to left,
     rgba(11, 144, 227, 0.457),
@@ -20,6 +21,7 @@
   padding: 20px;
   color: white;
   text-align: center;
+  margin-bottom: 30px;
 }
 .app-header h2 {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
@@ -37,4 +39,82 @@
 .nav a:hover {
   text-decoration: none;
   color: #131415;
+}
+.ghost-button {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background: none;
+  border-color: transparent;
+  border-radius: 10px;
+  color: rgba(15, 16, 16, 0.929);
+  padding: 5px 20px;
+  font-size: 1.5em;
+  font-weight: 600;
+  cursor: pointer;
+}
+.ghost-button:hover {
+  background-color: rgba(15, 16, 16, 0.929);
+  color: white;
+}
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+.auth-card {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: black 0px 0px 10px;
+  width: 100%;
+  max-width: 350px;
+}
+.auth-card h2 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 2em;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #051423d2;
+}
+.submit-btn {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: #04415895;
+  color: white;
+  margin-top: 10px;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 7px;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.submit-btn:hover {
+  background-color: #c0d8e7;
+  color: black;
+}
+.reg-link {
+  margin-top: 10px;
+  font-size: 0.9em;
+  color: #051423d2;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0 10px;
+}
+
+.form-group label,
+.form-group input {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin-bottom: 5px;
+  font-size: 1em;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
 }

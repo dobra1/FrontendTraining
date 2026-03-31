@@ -1,11 +1,34 @@
-import React from 'react'
+import React from "react";
 
-type Props = {}
+type FormInputProps = {
+  label: string;
+  name: string;
+  type?: string;
+  value: string;
+  placeholder?: string;
+  onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+};
 
-function FormInput({}: Props) {
+function FormInput({
+  label,
+  name,
+  type = "text",
+  value,
+  onChange,
+  placeholder,
+}: FormInputProps) {
   return (
-    <div>FormInput</div>
-  )
+    <div className="form-group">
+      <input
+        id={name}
+        name={name}
+        type={type}
+        value={value}
+        onChange={onChange}
+        placeholder={placeholder}
+      />
+    </div>
+  );
 }
 
-export default FormInput
+export default FormInput;

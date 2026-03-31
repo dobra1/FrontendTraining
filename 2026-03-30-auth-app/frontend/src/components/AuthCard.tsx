@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { type ReactNode } from "react";
 
-type Props = {}
+type PropsWithChildren = { children: ReactNode; title: string };
 
-function AuthCard({}: Props) {
+function AuthCard({ children, title }: PropsWithChildren) {
   return (
-    <div>AuthCard</div>
-  )
+    <div className="auth-card">
+      <h2>{title}</h2>
+      <div className="auth-content">{children}</div>
+    </div>
+  );
 }
 
-export default AuthCard
+export default AuthCard;
